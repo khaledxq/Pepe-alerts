@@ -1,7 +1,7 @@
 import os, time, requests
 
-TG_TOKEN = os.environ["TELEGRAM_TOKEN"]
-TG_CHAT  = os.environ["TELEGRAM_CHAT_ID"]
+TG_TOKEN = os.environ["8014877763:AAECIh5fwyITvxsTzbTS_PtJrFqF7TshNw4"]
+TG_CHAT  = os.environ["157614487"]
 SYMBOL   = os.environ.get("SYMBOL", "PEPEUSDT").upper()
 PRICE_JUMP_PCT = float(os.environ.get("PRICE_JUMP_PCT", "1.5"))  # نسبة القفزة %
 WINDOW_MIN = int(os.environ.get("WINDOW_MIN", "5"))               # عدد الدقائق
