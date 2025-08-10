@@ -1,0 +1,22 @@
+name: PEPE Alerts
+on:
+  schedule:
+    - cron: "*/1 * * * *"  # كل دقيقة
+  workflow_dispatch: {}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --no-cache-dir requests
+      - run: python monitor.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SYMBOL: ${{ secrets.SYMBOL }}
+          PRICE_JUMP_PCT: ${{ secrets.PRICE_JUMP_PCT }}
+          WINDOW_MIN: ${{ secrets.WINDOW_MIN }}
+          NET_BUY_USD_MIN: ${{ secrets.NET_BUY_USD_MIN }}
