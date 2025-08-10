@@ -1,6 +1,6 @@
 import os, time, requests
 
-TG_TOKEN = os.environ["8014877763:AAECIh5fwyITvxsTzbTS_PtJrFqF7TshNw4"]
+TG_TOKEN = os.environ["‏8066947670:AAEi_0vHGqPmXDt-DUR-HKKVe51TkljV_es"]
 TG_CHAT  = os.environ["157614487"]
 SYMBOL   = os.environ.get("SYMBOL", "PEPEUSDT").upper()
 PRICE_JUMP_PCT = float(os.environ.get("PRICE_JUMP_PCT", "1.5"))  # نسبة القفزة %
